@@ -13,7 +13,7 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b border-navy-900/10 bg-white/90 backdrop-blur">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6">
         <a href="#" className="block w-36 shrink-0 sm:w-40" aria-label="BTG Pactual - início">
-          <ImagePlaceholder slot={images.logo} compact className="rounded-md p-1" />
+          <ImagePlaceholder slot={images.logo} compact priority />
         </a>
 
         <nav className="hidden items-center gap-8 text-sm font-medium text-navy-800 md:flex">

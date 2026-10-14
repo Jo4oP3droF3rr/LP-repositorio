@@ -43,8 +43,8 @@ Cada espaço de imagem aparece na página como uma caixa tracejada com um label 
 
 | ID | Seção | Descrição | Tamanho (px) | Arquivo |
 |---|---|---|---|---|
-| `IMG-LOGO` | Header | Logo BTG Pactual (versão horizontal, fundo transparente) | 320×80 | `public/images/logo-btg.svg` |
-| `IMG-LOGO-FOOTER` | Footer | Logo BTG Pactual (versão negativa/branca) | 320×80 | `public/images/logo-btg-white.svg` |
+| `IMG-LOGO` | Header | Logo BTG Pactual (versão horizontal, fundo transparente) | 800×318 | `public/images/logo-btg.png` ✅ |
+| `IMG-LOGO-FOOTER` | Footer | Logo BTG Pactual (versão negativa/branca) | 800×318 | `public/images/logo-btg-white.png` ✅ |
 | `IMG-HERO-01` | Hero | Imagem principal: pessoa usando o app BTG ou composição com o app em destaque | 1200×1200 | `public/images/hero.webp` |
 | `IMG-PROD-CDB` | Produtos | Ícone/ilustração CDB | 160×160 | `public/images/produtos/cdb.svg` |
 | `IMG-PROD-TESOURO` | Produtos | Ícone/ilustração Tesouro Direto | 160×160 | `public/images/produtos/tesouro.svg` |

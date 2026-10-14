@@ -23,7 +23,7 @@ export function Footer() {
         <div className="grid gap-12 lg:grid-cols-4">
           <div>
             <div className="w-40">
-              <ImagePlaceholder slot={images.logoFooter} tone="dark" compact className="p-1" />
+              <ImagePlaceholder slot={images.logoFooter} tone="dark" compact />
             </div>
             <p className="mt-6 text-sm">
               Atendimento: 0800 XXX XXXX
