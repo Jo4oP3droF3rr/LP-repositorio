@@ -39,6 +39,15 @@ export const images = {
     height: 1080,
     path: "/images/hero.webp",
   },
+  heroMobile: {
+    id: "IMG-HERO-MOBILE",
+    section: "Hero (mobile)",
+    description: "Foto do hero no celular (retrato), texto fica sobre a parte de baixo",
+    width: 1116,
+    height: 2000,
+    path: "/images/hero-mobile.webp",
+    src: "/images/hero-mobile.webp",
+  },
   productCdb: {
     id: "IMG-PROD-CDB",
     section: "Produtos",

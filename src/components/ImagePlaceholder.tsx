@@ -11,6 +11,8 @@ type Props = {
   priority?: boolean;
   // Ocupa 100% do pai posicionado (uso como imagem de fundo)
   fill?: boolean;
+  // Repassado ao next/image no modo fill
+  sizes?: string;
 };
 
 export function ImagePlaceholder({
@@ -20,6 +22,7 @@ export function ImagePlaceholder({
   compact = false,
   priority = false,
   fill = false,
+  sizes = "100vw",
 }: Props) {
   const aspectRatio = `${slot.width} / ${slot.height}`;
 
@@ -29,7 +32,7 @@ export function ImagePlaceholder({
         src={slot.src}
         alt={slot.description}
         fill
-        sizes="100vw"
+        sizes={sizes}
         priority={priority}
         className={`object-cover ${className}`}
       />
