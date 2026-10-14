@@ -53,6 +53,7 @@ Cada espaço de imagem aparece na página como uma caixa tracejada com um label 
 | `IMG-PROD-ACOES` | Produtos | Ícone/ilustração Renda Variável (ações, FIIs, ETFs) | 160×160 | `public/images/produtos/acoes.svg` |
 | `IMG-PROD-PREV` | Produtos | Ícone/ilustração Previdência Privada | 160×160 | `public/images/produtos/previdencia.svg` |
 | `IMG-PROD-CARTAO` | Produtos | Imagem do cartão BTG | 160×160 | `public/images/produtos/cartao.webp` |
+| `IMG-CARTAO-ULTRABLUE` | Cartão | Cartão BTG Ultrablue (PNG/WebP com fundo transparente) | 470×315 | `public/images/cartao-ultrablue.webp` ✅ |
 | `IMG-APP-MOCKUP` | App | Mockup de celular com a tela do app BTG Investimentos | 900×1100 | `public/images/app-mockup.webp` |
 | `IMG-BADGE-APPSTORE` | App | Selo oficial 'Baixar na App Store' | 270×80 | `public/images/badges/app-store.svg` |
 | `IMG-BADGE-GPLAY` | App | Selo oficial 'Disponível no Google Play' | 270×80 | `public/images/badges/google-play.svg` |

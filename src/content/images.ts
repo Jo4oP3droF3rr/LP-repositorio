@@ -97,6 +97,15 @@ export const images = {
     height: 160,
     path: "/images/produtos/cartao.webp",
   },
+  cardUltrablue: {
+    id: "IMG-CARTAO-ULTRABLUE",
+    section: "Cartão",
+    description: "Cartão BTG Ultrablue (PNG/WebP com fundo transparente)",
+    width: 470,
+    height: 315,
+    path: "/images/cartao-ultrablue.webp",
+    src: "/images/cartao-ultrablue.webp",
+  },
   appMockup: {
     id: "IMG-APP-MOCKUP",
     section: "App",
