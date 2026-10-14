@@ -34,9 +34,9 @@ export const images = {
   hero: {
     id: "IMG-HERO-01",
     section: "Hero",
-    description: "Imagem principal: pessoa usando o app BTG ou composição com o app em destaque",
-    width: 1200,
-    height: 1200,
+    description: "Foto de fundo do hero, full-bleed. Pessoa real em contexto (não banco de imagem genérico); deixar o lado esquerdo com respiro para o texto",
+    width: 1920,
+    height: 1080,
     path: "/images/hero.webp",
   },
   productCdb: {

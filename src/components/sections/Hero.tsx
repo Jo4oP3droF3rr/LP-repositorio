@@ -3,47 +3,46 @@ import { images } from "@/content/images";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-navy-900 text-white">
-      <div className="pointer-events-none absolute -top-40 -right-40 h-[32rem] w-[32rem] rounded-full bg-brand-500/20 blur-3xl" />
+    <section className="relative isolate flex min-h-[calc(100svh-5rem)] items-end overflow-hidden bg-navy-950 text-white">
+      <ImagePlaceholder slot={images.hero} tone="dark" fill priority className="-z-20" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-navy-950 via-navy-950/85 to-navy-950/10" />
 
-      <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-4 py-16 sm:px-6 md:py-24 lg:grid-cols-2">
-        <div>
-          <span className="inline-block rounded-full border border-white/20 px-3 py-1 text-xs font-semibold tracking-widest text-accent-400 uppercase">
-            Conta digital gratuita
-          </span>
-          <h1 className="mt-6 text-4xl leading-tight font-bold sm:text-5xl lg:text-6xl">
-            Seu dinheiro investido com quem entende de mercado.
-          </h1>
-          <p className="mt-6 max-w-xl text-lg text-white/75">
-            Acesse CDBs, Tesouro Direto, fundos, ações e previdência em uma única plataforma, com
-            a expertise do maior banco de investimentos da América Latina.
-          </p>
+      <div className="mx-auto w-full max-w-7xl px-4 pt-24 pb-14 sm:px-6 md:pb-20">
+        <h1 className="max-w-3xl text-5xl leading-[0.95] font-semibold tracking-tight sm:text-7xl lg:text-8xl">
+          Banco de investimento de verdade.
+          <span className="block text-white/45">No seu celular.</span>
+        </h1>
 
-          <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-            <a
-              href="#abrir-conta"
-              className="rounded-full bg-accent-400 px-8 py-4 text-center font-semibold text-navy-950 transition hover:brightness-95"
-            >
-              Abrir conta grátis
-            </a>
-            <a
-              href="#produtos"
-              className="rounded-full border border-white/30 px-8 py-4 text-center font-semibold transition hover:bg-white/10"
-            >
-              Conhecer investimentos
-            </a>
-          </div>
+        <p className="mt-8 max-w-md text-lg text-white/70">
+          A mesma mesa que estrutura operações para grandes empresas agora monta a sua carteira.
+          Renda fixa, fundos, ações e previdência em um app só.
+        </p>
 
-          <ul className="mt-10 flex flex-wrap gap-x-8 gap-y-3 text-sm text-white/70">
-            <li>✓ Sem taxa de manutenção</li>
-            <li>✓ Tesouro Direto sem taxa de custódia*</li>
-            <li>✓ Assessoria especializada</li>
-          </ul>
-        </div>
+        <form action="#abrir-conta" className="mt-10 flex max-w-lg flex-col gap-2 sm:flex-row">
+          <label htmlFor="hero-email" className="sr-only">
+            Seu e-mail
+          </label>
+          <input
+            id="hero-email"
+            type="email"
+            required
+            placeholder="Seu melhor e-mail"
+            className="h-14 w-full rounded-md sm:flex-1 border border-white/20 bg-white/10 px-4 text-white placeholder:text-white/50 focus:border-accent-400 focus:outline-none"
+          />
+          <button
+            type="submit"
+            className="h-14 rounded-md bg-accent-400 px-7 font-semibold text-navy-950 transition hover:brightness-95"
+          >
+            Abrir conta grátis
+          </button>
+        </form>
 
-        <div className="mx-auto w-full max-w-lg lg:max-w-none">
-          <ImagePlaceholder slot={images.hero} tone="dark" priority className="rounded-3xl" />
-        </div>
+        <p className="mt-4 text-sm text-white/50">
+          Já é cliente?{" "}
+          <a href="#" className="text-white underline underline-offset-4 hover:text-accent-400">
+            Acesse sua conta
+          </a>
+        </p>
       </div>
     </section>
   );
