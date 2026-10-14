@@ -35,9 +35,10 @@ export const images = {
     id: "IMG-HERO-01",
     section: "Hero",
     description: "Foto de fundo do hero, full-bleed. Pessoa real em contexto (não banco de imagem genérico); deixar o lado esquerdo com respiro para o texto",
-    width: 1920,
-    height: 1080,
+    width: 2000,
+    height: 1125,
     path: "/images/hero.webp",
+    src: "/images/hero.webp",
   },
   heroMobile: {
     id: "IMG-HERO-MOBILE",

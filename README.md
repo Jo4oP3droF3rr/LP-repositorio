@@ -45,7 +45,7 @@ Cada espaço de imagem aparece na página como uma caixa tracejada com um label 
 |---|---|---|---|---|
 | `IMG-LOGO` | Header | Logo BTG Pactual (versão horizontal, fundo transparente) | 800×318 | `public/images/logo-btg.png` ✅ |
 | `IMG-LOGO-FOOTER` | Footer | Logo BTG Pactual (versão negativa/branca) | 800×318 | `public/images/logo-btg-white.png` ✅ |
-| `IMG-HERO-01` | Hero | Foto de fundo do hero, full-bleed. Pessoa real em contexto (não banco de imagem genérico); deixar o lado esquerdo com respiro para o texto | 1920×1080 | `public/images/hero.webp` |
+| `IMG-HERO-01` | Hero (desktop) | Foto de fundo do hero no desktop | 2000×1125 | `public/images/hero.webp` ✅ |
 | `IMG-HERO-MOBILE` | Hero (mobile) | Foto do hero no celular (retrato), texto fica sobre a parte de baixo | 1116×2000 | `public/images/hero-mobile.webp` ✅ |
 | `IMG-PROD-CDB` | Produtos | Ícone/ilustração CDB | 160×160 | `public/images/produtos/cdb.svg` |
 | `IMG-PROD-TESOURO` | Produtos | Ícone/ilustração Tesouro Direto | 160×160 | `public/images/produtos/tesouro.svg` |

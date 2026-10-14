@@ -16,13 +16,20 @@ export function Hero() {
       </div>
 
       {/* Desktop: foto full-bleed, degradê da esquerda pra direita */}
-      <div className="absolute inset-0 -z-20 hidden md:block">
-        <ImagePlaceholder slot={images.hero} tone="dark" fill />
-        <div className="absolute inset-0 bg-gradient-to-r from-navy-950 via-navy-950/85 to-navy-950/10" />
+      {/* Imagem deslocada pra direita para a pessoa ficar ao lado do texto */}
+      <div className="absolute inset-y-0 -right-[10%] left-[40%] -z-20 hidden md:block xl:left-[25%]">
+        <ImagePlaceholder
+          slot={images.hero}
+          fill
+          priority
+          sizes="(min-width: 768px) 85vw, 0px"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-navy-950 to-transparent to-30%" />
       </div>
+      <div className="absolute inset-0 -z-10 hidden bg-gradient-to-r from-navy-950 from-20% to-transparent to-50% md:block" />
 
       <div className="mx-auto w-full max-w-7xl px-4 pt-[94vw] pb-14 sm:px-6 md:pt-24 md:pb-20">
-        <h1 className="max-w-3xl text-5xl leading-[0.95] font-semibold tracking-tight sm:text-7xl lg:text-8xl">
+        <h1 className="max-w-3xl text-5xl leading-[0.95] font-semibold tracking-tight sm:text-7xl xl:text-8xl">
           Banco de investimento de verdade.
           <span className="block text-white/45">No seu celular.</span>
         </h1>
