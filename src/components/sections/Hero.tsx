@@ -5,7 +5,7 @@ export function Hero() {
   return (
     <section className="relative isolate flex min-h-[calc(100svh-5rem)] items-end overflow-hidden bg-navy-950 text-white">
       {/* Mobile: foto no tamanho natural no topo, degradê de baixo pra cima */}
-      <div className="absolute inset-x-0 top-0 -z-20 aspect-[1116/2000] md:hidden">
+      <div className="absolute inset-x-0 -top-[28vw] -z-20 aspect-[1116/2000] md:hidden">
         <ImagePlaceholder
           slot={images.heroMobile}
           fill
@@ -21,7 +21,7 @@ export function Hero() {
         <div className="absolute inset-0 bg-gradient-to-r from-navy-950 via-navy-950/85 to-navy-950/10" />
       </div>
 
-      <div className="mx-auto w-full max-w-7xl px-4 pt-[122vw] pb-14 sm:px-6 md:pt-24 md:pb-20">
+      <div className="mx-auto w-full max-w-7xl px-4 pt-[94vw] pb-14 sm:px-6 md:pt-24 md:pb-20">
         <h1 className="max-w-3xl text-5xl leading-[0.95] font-semibold tracking-tight sm:text-7xl lg:text-8xl">
           Banco de investimento de verdade.
           <span className="block text-white/45">No seu celular.</span>
