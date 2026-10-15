@@ -38,6 +38,8 @@ details > summary::-webkit-details-marker {
   --ry: 0deg;
   --mx: 50%;
   --my: 50%;
+  --px: 0;
+  --py: 0;
 }
 .card3d-tilt {
   transform: rotateX(var(--rx)) rotateY(var(--ry));
@@ -60,6 +62,41 @@ details > summary::-webkit-details-marker {
 }
 .card3d[data-active="true"] .card3d-shine {
   opacity: 1;
+}
+.card3d-word {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: clamp(5rem, 19vw, 17rem);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  white-space: nowrap;
+  user-select: none;
+  pointer-events: none;
+}
+/* Atrás do cartão: só contorno, parallax no sentido oposto ao mouse */
+.card3d-word-back {
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgb(255 255 255 / 0.28);
+  transform: translate(
+    calc(-50% + var(--px) * -48px),
+    calc(-50% + var(--py) * -24px)
+  );
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.card3d[data-active="true"] .card3d-word-back {
+  transition: transform 0.12s linear;
+}
+/* Dentro do cartão: preenchida e mesclada ao metal, inclina junto */
+.card3d-word-front {
+  color: #fff;
+  transform: translate(-50%, -50%);
+}
+/* O blend fica no wrapper mascarado: o mask isola o filho, então só o
+   wrapper consegue mesclar com o cartão que está embaixo */
+.card3d-word-blend {
+  mix-blend-mode: overlay;
 }
 .card3d-float {
   animation: card3d-float 6s ease-in-out infinite;
