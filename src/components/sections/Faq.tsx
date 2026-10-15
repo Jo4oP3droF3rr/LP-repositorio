@@ -25,7 +25,7 @@ export function Faq() {
   return (
     <section id="faq" className="scroll-mt-20 bg-white">
       <div className="mx-auto max-w-3xl px-4 py-20 sm:px-6 md:py-28">
-        <h2 className="text-center text-3xl font-bold sm:text-4xl">Perguntas frequentes</h2>
+        <h2 className="text-center text-3xl font-medium tracking-tight sm:text-4xl">Perguntas frequentes</h2>
 
         <div className="mt-12 divide-y divide-navy-900/10 border-y border-navy-900/10">
           {faqs.map((f) => (

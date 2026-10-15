@@ -12,15 +12,15 @@ export function AppShowcase() {
   return (
     <section id="app" className="scroll-mt-20 bg-white">
       <div className="mx-auto grid max-w-7xl items-center gap-14 px-4 py-20 sm:px-6 md:py-28 lg:grid-cols-2">
-        <div className="mx-auto w-full max-w-md lg:order-last">
-          <ImagePlaceholder slot={images.appMockup} className="rounded-3xl" />
+        <div className="order-last mx-auto w-full max-w-xs">
+          <ImagePlaceholder slot={images.appMockup} />
         </div>
 
         <div>
-          <p className="text-sm font-semibold tracking-widest text-brand-500 uppercase">
+          <p className="text-sm text-navy-800/60">
             App BTG Pactual
           </p>
-          <h2 className="mt-3 text-3xl font-bold sm:text-4xl">
+          <h2 className="mt-3 text-3xl font-medium tracking-tight sm:text-4xl">
             O banco e a corretora na palma da sua mão
           </h2>
           <ul className="mt-8 space-y-4">

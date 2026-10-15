@@ -26,9 +26,9 @@ export function Footer() {
               <ImagePlaceholder slot={images.logoFooter} tone="dark" compact />
             </div>
             <p className="mt-6 text-sm">
-              Atendimento: 0800 XXX XXXX
+              Atendimento: 0800 555 0123
               <br />
-              Ouvidoria: 0800 XXX XXXX
+              Ouvidoria: 0800 555 0456
             </p>
           </div>
 
@@ -48,18 +48,9 @@ export function Footer() {
           ))}
         </div>
 
-        <div className="mt-12 flex flex-wrap gap-4">
-          <div className="w-32">
-            <ImagePlaceholder slot={images.seloAnbima} tone="dark" compact />
-          </div>
-          <div className="w-32">
-            <ImagePlaceholder slot={images.seloB3} tone="dark" compact />
-          </div>
-        </div>
-
         <div className="mt-12 space-y-3 border-t border-white/10 pt-8 text-xs leading-relaxed text-white/45">
           <p>
-            [DISCLAIMER A VALIDAR COM COMPLIANCE] Rentabilidade passada não é garantia de
+            Rentabilidade passada não é garantia de
             rentabilidade futura. Investimentos envolvem riscos e não contam com garantia da
             instituição, do gestor, de qualquer mecanismo de seguro ou do FGC, exceto quando
             indicado. Leia o regulamento, a lâmina e o formulário de informações complementares

@@ -1,7 +1,4 @@
-"use client";
-
 import Image from "next/image";
-import { useRef } from "react";
 
 type Props = {
   src: string;
@@ -12,36 +9,7 @@ type Props = {
   word?: string;
 };
 
-const MAX_TILT = 18;
-
 export function Card3D({ src, alt, width, height, word }: Props) {
-  const ref = useRef<HTMLDivElement>(null);
-
-  function handleMove(e: React.PointerEvent<HTMLDivElement>) {
-    const el = ref.current;
-    if (!el || e.pointerType === "touch") return;
-    const rect = el.getBoundingClientRect();
-    const x = (e.clientX - rect.left) / rect.width;
-    const y = (e.clientY - rect.top) / rect.height;
-    el.style.setProperty("--rx", `${(0.5 - y) * MAX_TILT * 2}deg`);
-    el.style.setProperty("--ry", `${(x - 0.5) * MAX_TILT * 2}deg`);
-    el.style.setProperty("--px", `${x - 0.5}`);
-    el.style.setProperty("--py", `${y - 0.5}`);
-    el.style.setProperty("--mx", `${x * 100}%`);
-    el.style.setProperty("--my", `${y * 100}%`);
-    el.dataset.active = "true";
-  }
-
-  function handleLeave() {
-    const el = ref.current;
-    if (!el) return;
-    el.style.setProperty("--rx", "0deg");
-    el.style.setProperty("--ry", "0deg");
-    el.style.setProperty("--px", "0");
-    el.style.setProperty("--py", "0");
-    el.dataset.active = "false";
-  }
-
   const cardMask = {
     WebkitMaskImage: `url(${src})`,
     maskImage: `url(${src})`,
@@ -50,12 +18,18 @@ export function Card3D({ src, alt, width, height, word }: Props) {
   };
 
   return (
-    <div
-      ref={ref}
-      onPointerMove={handleMove}
-      onPointerLeave={handleLeave}
-      className="card3d group relative mx-auto w-full max-w-md [perspective:1200px]"
-    >
+    <div className="card3d relative mx-auto w-full max-w-md [perspective:1200px]">
+      {/* Contorno via filtro (dilata a letra cheia e subtrai o miolo): o
+          text-stroke desenha os contornos sobrepostos internos da fonte */}
+      <svg aria-hidden width="0" height="0" className="absolute">
+        <filter id="card3d-outline">
+          <feMorphology in="SourceAlpha" operator="dilate" radius="1.5" result="grow" />
+          <feComposite in="grow" in2="SourceAlpha" operator="out" result="ring" />
+          <feFlood floodColor="#fff" floodOpacity="0.28" />
+          <feComposite in2="ring" operator="in" />
+        </filter>
+      </svg>
+
       <div className="relative">
         {word && (
           <span aria-hidden className="card3d-word card3d-word-back">
@@ -79,9 +53,6 @@ export function Card3D({ src, alt, width, height, word }: Props) {
                 <span className="card3d-word card3d-word-front">{word}</span>
               </div>
             )}
-
-            {/* Reflexo que segue o cursor, recortado no formato do cartão */}
-            <div aria-hidden className="card3d-shine pointer-events-none absolute inset-0" style={cardMask} />
           </div>
         </div>
       </div>

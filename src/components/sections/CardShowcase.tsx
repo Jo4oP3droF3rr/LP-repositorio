@@ -1,13 +1,6 @@
 import { Card3D } from "@/components/Card3D";
 import { images } from "@/content/images";
 
-// Benefícios a validar com a tabela oficial do cartão antes de publicar.
-const perks = [
-  { label: "Bandeira", value: "Mastercard World Legend" },
-  { label: "Pagamento", value: "Aproximação, carteiras digitais e cartão virtual" },
-  { label: "Benefícios", value: "[A CONFIRMAR: salas VIP, pontos, cashback]" },
-];
-
 export function CardShowcase() {
   const card = images.cardUltrablue;
 
@@ -26,35 +19,23 @@ export function CardShowcase() {
           />
         </div>
 
-        <div className="mt-6 grid gap-12 lg:grid-cols-2 lg:gap-20">
-          <div>
-            <h2 className="text-4xl leading-[1.05] font-semibold tracking-tight sm:text-6xl">
-              O cartão que pesa
-              <span className="block text-white/45">no bolso certo.</span>
-            </h2>
-            <p className="mt-6 max-w-md text-lg text-white/70">
-              Metal escovado, Mastercard World Legend e controle total pelo app. Os gastos aparecem
-              em tempo real ao lado da sua carteira de investimentos.
-            </p>
-          </div>
+        <div className="mt-6 text-center lg:text-left">
+          <h2 className="text-4xl leading-[1.05] font-medium tracking-tight sm:text-6xl">
+            O cartão que pesa
+            <span className="block text-white/45">no bolso certo.</span>
+          </h2>
+          <p className="mx-auto mt-6 max-w-xl text-lg text-white/70 lg:mx-0">
+            Vá mais longe com até 4,5 pontos por dólar gasto ou até 2% de cashback em todas as suas
+            compras no crédito, concierge dedicado para apoiar o planejamento de viagens, eventos e
+            celebrações, acessos ilimitados às Salas VIP Dragonpass e LoungeKey, e muito mais.
+          </p>
 
-          <div>
-            <dl className="divide-y divide-white/10 border-y border-white/10">
-              {perks.map((p) => (
-                <div key={p.label} className="grid grid-cols-[7rem_1fr] gap-4 py-4 text-sm">
-                  <dt className="text-white/50">{p.label}</dt>
-                  <dd>{p.value}</dd>
-                </div>
-              ))}
-            </dl>
-
-            <a
-              href="#abrir-conta"
-              className="mt-10 inline-block rounded-md bg-accent-400 px-7 py-4 font-semibold text-navy-950 transition hover:brightness-95"
-            >
-              Quero o Ultrablue
-            </a>
-          </div>
+          <a
+            href="#abrir-conta"
+            className="mt-10 inline-block rounded-md bg-accent-400 px-7 py-4 font-semibold text-navy-950 transition hover:brightness-95"
+          >
+            Quero o Ultrablue
+          </a>
         </div>
       </div>
     </section>
